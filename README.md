@@ -1,7 +1,3 @@
-Okay, this original README is a great starting point\! It provides good context and visuals. We can now merge the information from this README with the details about your *upgraded* version (speech output, debouncing, performance improvements) to create a final, comprehensive description for your showcase.
-
-Here's the refined description, combining the best of both:
-
 -----
 
 ## Real-Time Indian Sign Language Recognition (0-9, A-Z) with Speech Output
@@ -76,4 +72,70 @@ This project captures video from a webcam, detects hand landmarks in real-time u
 
 -----
 
-**Action:** How does this combined description look? Does it accurately capture the project, including your upgrades? We can refine any section further.
+## Setup and Installation
+
+Follow these steps to set up and run the Indian Sign Language Recognition project on your local machine.
+
+### Prerequisites
+
+  * **Git:** You need Git installed to clone the repository.
+  * **Python:** The required Python version depends on your operating system:
+      * **Windows:** Python **3.9.13** is recommended. You can download it from the [official Python website](https://www.python.org/downloads/release/python-3913/) or install it via the Microsoft Store.
+      * **Linux:** Python **3.9.18** is recommended. You can install it using your system's package manager (like `apt` on Debian/Ubuntu) or manage multiple Python versions using a tool like [`pyenv`](https://www.google.com/search?q=%5Bhttps://github.com/pyenv/pyenv%5D\(https://github.com/pyenv/pyenv\)).
+  * **Webcam:** A connected webcam is required for real-time detection.
+
+### Installation Steps
+
+1.  **Clone the Repository:**
+    Open your terminal or command prompt and run:
+
+    ```bash
+    git clone <your-repository-url>
+    cd isl-sign-recognition # Or your chosen repository name
+    ```
+
+2.  **Create a Virtual Environment:**
+    It's highly recommended to use a virtual environment to manage dependencies. Navigate into the project directory and run:
+
+    ```bash
+    python -m venv venv
+    ```
+
+    *(If you have multiple Python versions, ensure you use the correct one, e.g., `python3.9 -m venv venv`)*
+
+3.  **Activate the Virtual Environment:**
+
+      * **On Windows (Command Prompt/PowerShell):**
+        ```bash
+        venv\Scripts\activate
+        ```
+      * **On Linux/macOS (Bash/Zsh):**
+        ```bash
+        source venv/bin/activate
+        ```
+
+    After activation, you should see `(venv)` at the beginning of your terminal prompt. You can verify the Python version by running `python --version`.
+
+4.  **Install Dependencies:**
+    Install the required packages using the correct requirements file for your OS:
+
+      * **On Windows:**
+        ```bash
+        pip install -r requirements-windows.txt
+        ```
+      * **On Linux:**
+        ```bash
+        pip install -r requirements-linux.txt
+        ```
+
+### Running the Application
+
+1.  **Ensure your virtual environment is activated.** (You should see `(venv)` in your prompt).
+2.  **Run the main script:**
+    ```bash
+    python isl_detection.py
+    ```
+3.  The application should start, open your webcam feed in a window, and begin detecting hand signs.
+4.  **To stop the application:** Press the **`Esc`** key while the OpenCV window is active.
+
+-----
