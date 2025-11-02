@@ -7,6 +7,10 @@ This project captures video from a webcam, detects hand landmarks in real-time u
 **Upgrade:** This version builds upon an initial gesture detection project by adding asynchronous text-to-speech output and prediction debouncing to significantly improve usability and performance.
 
 -----
+![Demo](assets/isl-sign.png)
+
+-----
+
 ![Demo](assets/demo.gif)
 
 ### How it Works (Pipeline)
