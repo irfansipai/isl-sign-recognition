@@ -142,8 +142,12 @@ with mp_hands.Hands(
                     pre_processed_landmark_list = pre_process_landmark(landmark_list)
                     
                     # Prediction logic
-                    df = pd.DataFrame(pre_processed_landmark_list).transpose()
-                    predictions = model.predict(df, verbose=0)
+                    # 1. Convert to numpy array directly (reshape to 1 row, X columns)
+                    input_data = np.array([pre_processed_landmark_list], dtype=np.float32)
+
+                    # 2. Call model directly (skips the heavy .predict() API overhead)
+                    predictions = model(input_data, training=False) 
+                    
                     predicted_classes = np.argmax(predictions, axis=1)
                     current_label = alphabet[predicted_classes[0]] # Get current frame's prediction
 
